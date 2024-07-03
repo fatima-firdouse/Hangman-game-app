@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* background-color: #c936e6, #8c52ff; */
+    background: linear-gradient(45deg, #c936e6, #8c52ff);
+            
+}
+.name-hangman h1 {
+  font-size: 35px;
+  color: #c936e6; /* updated color */
+  margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+}
+
+.hangman-img {
+    margin-bottom: 20px;
+}
+
+.hangman-img img {
+    width: 100px;
+}
+
+.form-container {
+   
+    text-align: center;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #c936e6;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #c936e6 ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: rgb(192, 174, 240);
+}
+
+.gender-container {
+    text-align: left;
+    margin-top: 10px;
+    
+    
+}
+
+.gender-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    width: 400px;
+    
+} /* Media Queries */
+        
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 20px;
+            }
+            
+            input, select {
+                font-size: 14px;
+            }
+            
+            button {
+                font-size: 14px;
+                padding: 8px;
+            }
+            
+            .hangman-img img {
+                width: 80px;
+            }
+            
+            .name-hangman {
+                font-size: 80px;
+            }
+            
+            .form-container {
+                max-width: 350px;
+            }
+            
+            .gender-container label {
+                width: 350px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .container {
+                width: 85%;
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 18px;
+            }
+            
+            input, select {
+                font-size: 12px;
+            }
+            
+            button {
+                font-size: 12px;
+                padding: 6px;
+            }
+            
+            .hangman-img img {
+                width: 60px;
+            }
+            
+            .name-hangman {
+                font-size: 60px;
+            }
+            
+            .form-container {
+                max-width: 300px;
+            }
+            
+            .gender-container label {
+                width: 300px;
+            }
+        }
+        
+        @media (max-width: 300px) {
+            .container {
+                width: 80%;
+                padding: 5px;
+            }
+            
+            h1 {
+                font-size: 15px;
+            }
+            
+            input, select {
+                font-size: 10px;
+            }
+            
+            button {
+                font-size: 10px;
+                padding: 4px;
+            }
+            
+            .hangman-img img {
+                width: 40px;
+            }
+            
+            .name-hangman {
+                font-size: 40px;
+            }
+            
+            .form-container {
+                max-width: 250px;
+            }
+            
+            .gender-container label {
+                width: 250px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="name-hangman">  <h1>.</h1></div>
+            
+            <form id="signupForm">
+                <input type="text" id="username" name="username" placeholder="Username" required>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <div class="gender-container">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" placeholder="Date of Birth" required></div>
+                <div class="gender-container">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="" disabled selected>Select your gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+        <div class="hangman-img">
+            <img src="hang-man.png" alt="Hangman">
+        </div>
+    </div>
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const username = document.getElementById('username').value;
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const dob = document.getElementById('dob').value;
+    const gender = document.getElementById('gender').value;
+
+    alert(` Name: ${name} you have Sign up successful!`);
+});
+
+    </script>
+</body>
+</html>
+

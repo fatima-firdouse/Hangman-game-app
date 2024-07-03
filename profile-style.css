@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #c936e6, #8c52ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.profile-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+}
+
+.profile-header {
+    background:#c936e6, #8c52ff;
+    color:  #8c52ff;
+    padding: 20px;
+}
+
+.profile-pic {
+    background: #8c52ff;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto 10px;
+    
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+/* .profile-pic image{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+
+} */
+.profile-details {
+    padding: 20px;
+}
+
+.detail {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail i {
+    margin-right: 10px;
+}
+
+.edit-profile-btn {
+    background: #c936e6, #8c52ff;
+    color: #c936e6, #8c52ff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+}
+
+.edit-profile-btn:hover {
+    background: #c936e6, #8c52ff;
+}
+
+
+/* Media query for screens with a maximum width of 768px (e.g. tablets) */
+@media only screen and (max-width: 768px) {
+    .container {
+         width: 80%; /* Make the container take up 80% of the screen width */
+     }
+     button {
+         font-size: 16px; /* Reduce the font size of the buttons */
+     }
+ }
+ 
+ /* Media query for screens with a maximum width of 480px (e.g. mobile phones) */
+ @media only screen and (max-width: 480px) {
+    .container {
+         width: 90%; /* Make the container take up 90% of the screen width */
+     }
+     button {
+         font-size: 14px; /* Reduce the font size of the buttons further */
+         padding: 10px; /* Reduce the padding of the buttons */
+     }
+ }

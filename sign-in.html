@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #c936e6, #8c52ff);
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px ;
+            width: 500px;
+        }
+        .form-container {
+            text-align: center;
+            max-width: 400px;
+        }
+        h1 {
+            font-size: 45px;
+            margin-bottom: 20px;
+            
+  color: #c936e6; 
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #c936e6;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #c936e6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: rgb(192, 174, 240);
+        }
+        .hangman-img {
+            margin-top: 0px;
+        }
+        .hangman-img img {
+            width: 100px;
+        }
+        /* Media Queries */
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            input {
+                font-size: 14px;
+            }
+            button {
+                font-size: 14px;
+                padding: 8px;
+            }
+            .form-container {
+                max-width: 350px;
+            }
+            .hangman-img img {
+                width: 80px;
+            }
+        }
+        @media (max-width: 400px) {
+            .container {
+                width: 85%;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 18px;
+            }
+            input {
+                font-size: 12px;
+            }
+            button {
+                font-size: 12px;
+                padding: 6px;
+            }
+            .form-container {
+                max-width: 300px;
+            }
+            .hangman-img img {
+                width: 60px;
+            }
+        }
+        @media (max-width: 300px) {
+            .container {
+                width: 80%;
+                padding: 5px;
+            }
+            h1 {
+                font-size: 15px;
+            }
+            input {
+                font-size: 10px;
+            }
+            button {
+                font-size: 10px;
+                padding: 4px;
+            }
+            .form-container {
+                max-width: 250px;
+            }
+            .hangman-img img {
+                width: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>The Hangman</h1>
+            <form id="signinForm">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+        <div class="hangman-img">
+            <img src="hang-man.png" alt="Hangman">
+        </div>
+    </div>
+    <script>
+        document.getElementById('signinForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            alert(`Sign in successful! Welcome back!`);
+        });
+    </script>
+</body>
+</html>

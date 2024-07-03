@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        /* Styles from the first file */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ensure full viewport height */
+            margin: 0;
+            background: linear-gradient(45deg, #c936e6, #8c52ff);
+            font-family: 'Arial', sans-serif;
+            /* color: #fff; */
+            position: relative;
+            padding-bottom: 4rem; /* Add padding for bottom navigation */
+        }
+        .background {
+            background-color: white;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+        .settings-button img {
+  width: 50px; 
+  height: 50px; 
+}
+       
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+ .menu-bar {
+  /* background-color: var(--color-black); */
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+
+  position: relative;
+} */
+
+.menu-bar ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu-bar ul li {
+  width: 120px;
+  padding: 10px 30px;
+  text-align: center;
+
+  position: relative;
+} 
+
+.menu-bar ul li a {
+  font-size: 20px;
+  color: var(--color-black);
+  text-decoration: none;
+
+  transition: all 0.3s;
+}
+
+.menu-bar ul li a:hover {
+  /* color: blueviolet; */
+  background-color: (192, 174, 240);
+}
+
+.fas {
+  float: right;
+  margin-left: 10px;
+  padding-top: 3px;
+}
+
+/* dropdown menu style */
+.dropdown-menu {
+  display: none;
+}
+
+.menu-bar ul li:hover .dropdown-menu {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: linear-gradient(45deg, #c936e6, #8c52ff);
+  color: black;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul {
+  display: block;
+  margin: 10px;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul li {
+  width: 150px;
+  padding: 10px;
+}
+
+.dropdown-menu-1 {
+  display: none;
+}
+
+.dropdown-menu ul li:hover .dropdown-menu-1 {
+  display: block;
+  position: absolute;
+  left: 150px;
+  top: 0;
+  background-color: #8c52ff;
+}
+
+        .top-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        .top-buttons button {
+            background:#c936e6;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            
+        }
+        .top-buttons button:hover {
+            background: rgb(192, 174, 240);
+        }
+        .stick-figure-area {
+            margin: 20px 0;
+        }
+        .hangman-heading {
+  font-size: 19px;
+  font-weight: bold;
+  border: white;
+  color: #c936e6;
+  text-align: center;
+  margin-bottom: 20px;
+}
+        .bottom-buttons {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .bottom-buttons button {
+            background: #c936e6;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            flex: 1 0 40%;
+            max-width: 100px;
+        }
+        .bottom-buttons button:hover {
+            background: rgb(192, 174, 240);
+        }
+        .play-button {
+            /* background: #c936e6; */
+            /* color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            position: relative;
+            width: 100px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px; */
+            background-image: linear-gradient(to right, #c936e6, #8c52ff);
+            border: none;
+            border-radius: 20px;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 18px;
+            cursor: pointer;
+            
+        }
+        .play-button:hover {
+            background: rgb(192, 174, 240);
+        }
+        .image img {
+            border: 5px solid #c936e6;
+  border-radius: 10px; /* add radius */
+}
+        .play-bttn {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+       
+
+
+
+
+        /* Styles for the .tab navigation */
+        footer {
+            background-color:white,#8c52ff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 1000; /* Ensure it's above other content */
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .navbar {
+            margin: 0; padding: 10px; background-color: white; border-radius: 50px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); display: flex; align-items: center; justify-content: center; position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+            /* display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: white;
+            padding: 10px 0;
+            padding-left: 390px;
+            padding-right: 20px;
+            margin-top: 1160000px;
+            padding-bottom: 0%;
+            border-radius: 100px;
+            margin: 0px; */
+        }
+
+        .nav-item {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            padding: 10px;
+            border-radius: 50%;
+            margin: 0 30px;
+        } 
+
+        .nav-item img {
+    width: 40px;
+    height: 40px;
+    display: block; /* Add this to center the image horizontally */
+    margin: 0 auto; /* Add this to center the image horizontally */
+}
+ /* Responsive adjustments */
+ @media (max-width: 600px) {
+            .background {
+                width: 90%;
+            }
+            .top-buttons button {
+                padding: 5px 10px;
+                font-size: 14px;
+            }
+            .bottom-buttons button {
+                flex-basis: 90%;
+                margin: 5px;
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+            .play-button {
+                width: 80px;
+                height: 40px;
+                font-size: 16px;
+            }
+            .play-bttn {
+                justify-content: center;
+                margin-top: 10px;
+            }
+            .play-bttn .play-button {
+                width: 80px;
+                height: 40px;
+                font-size: 16px;
+                margin: 5px;
+            }
+        }
+        
+  /* Media Query for Mobile devices */
+  @media (max-width: 480px) {
+            .nav-item img {
+                width: 40px;
+                height: 40px;
+            }
+            .settings-button img {
+    width: 10px;
+    height: 10px;}
+    .hangman-heading {
+    font-size: 22px;
+  }
+  .settings-button img {
+    width: 30px;
+    height: 30px;
+  }
+        }
+        
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+ .settings-button img {
+    width: 15px;
+    height: 15px;
+  }
+  .hangman-heading {
+    font-size: 28px;
+  }
+  .settings-button img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Media query for even smaller screens */
+
+        /* Media Query for Tablets and smaller devices */
+        /* @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 20px;
+            } */
+
+            /* .nav-item {
+                margin-bottom: 10px;
+            }
+        } */
+
+      
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="game-container">
+            <div class="top-buttons">
+                <div class="menu-bar">
+                    <ul>
+                      <li> <div class="settings-button"><a href="setting.html">  <img src="setting-icon.png" alt=""  alt="setting-icon"></a>
+                      </div>
+              <i class="fas fa-caret-down"></i></a>
+              
+                          <div class="dropdown-menu">
+                              <ul>
+                            <li><a href="sign-in.html">LOGIN</a></li>
+                                <li><a href="sign-up.html">SIGN UP</a></li>
+                              </ul>
+                            </div>
+                      </li>
+                    </ul>
+                  </div>
+
+            </div>
+            <div class="hangman-heading">
+                <h1>HANGMAN GAME</h1>
+            </div>
+            
+ <div class="image">
+    <img src="hang-man3.png" alt="" width="330px" height="400px">
+ </div>
+
+  
+            <div class="stick-figure-area">
+                <div class="stick-figure"></div>
+            </div>
+            <div class="play-bttn"><a href="play.html">
+                <button class="play-button">PLAY ▶</button></a>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer-container">
+        <nav class="navbar">
+          
+          
+                <div class="nav-item" id="Notifications">
+                    <a href="category.html">
+                        <img src="category.png" alt="Notifications" ></a>
+                </div>
+                <div class="nav-item" id="home">
+                    <a href="index.html">
+                        <img src="home.png" alt="home" ></a>
+                </div>
+                <div class="nav-item" id="profile"><a href="profile.html">    <img src="profile.png" alt="profile">
+                </a>
+                 </div>
+             
+         
+           
+        </nav>
+    </footer>
+
+    <script>
+        // JavaScript from the first file
+        document.querySelector('.play-button').addEventListener('click', () => {
+            // Handle play button click
+            console.log('Play button clicked!');
+        });
+
+        document.querySelector('.settings-button').addEventListener('click', () => {
+            // Handle settings button click
+            console.log('Settings button clicked!');
+        });
+
+        document.querySelector('.score-button').addEventListener('click', () => {
+            // Handle score button click
+            console.log('Score button clicked!');
+        });
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', () => {
+                document.querySelector('.nav-item.active')?.classList.remove('active');
+                item.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

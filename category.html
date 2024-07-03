@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick a Category</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #c936e6, #8c52ff);
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color:  white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 15px;
+            font-size: 18px;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background-image: linear-gradient(to right,  #c936e6, #8c52ff);
+            transition: opacity 0.3s;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+        /* Add this to your CSS */
+
+/* For screens with a maximum width of 768px (e.g. tablets) */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 80%; /* Make the container take up 80% of the screen width */
+    }
+    button {
+        font-size: 16px; /* Reduce the font size of the buttons */
+    }
+}
+
+/* For screens with a maximum width of 480px (e.g. mobile phones) */
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 90%; /* Make the container take up 90% of the screen width */
+    }
+    button {
+        font-size: 14px; /* Reduce the font size of the buttons further */
+        padding: 10px; /* Reduce the padding of the buttons */
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Category</h1>
+        <button>MOVIES</button>
+        <button>TV SHOWS</button>
+        <button>COUNTRIES</button>
+        <button>CAPITAL CITIES</button>
+        <button>ANIMALS</button>
+        <button>SPORTS</button>
+    </div>
+</body>
+</html>
