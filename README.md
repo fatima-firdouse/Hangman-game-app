@@ -35,9 +35,9 @@ Hangman-game-app/
 ├── profile.png             # Profile page visual
 └── setting-icon.png        # Settings icon asset
 
-
 ---
-## 🖋 Author
-- Fatima Firdouse
 
+## ✍️ Author
+
+**Fatima Firdouse**
 
