@@ -4,7 +4,6 @@ Guess the word before the hangman completes! Introducing the fun and interactive
 
 ---
 
-
 ##  Features
 
 - 🆕 **Multiple Pages** – Includes home, sign-in/up, profile, and gameplay screens.
@@ -40,7 +39,7 @@ Hangman-game-app/
 
 ```
 ---
-## 
+## 🖋 Author
 - Made with ❤️ by Fatima Firdouse
 ---
 
