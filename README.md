@@ -14,7 +14,10 @@ Guess the word before the hangman completes! Introducing the fun and interactive
 - 🪙 **User Profiles** – Manage sign-in, sign-up, and personalized settings (if applicable).
 
 ---
+## 🛠️ Tech Stack
+- Frontend: HTML, CSS, JavaScript
 
+---
 ##  Project Structure
 
 ```plaintext
@@ -35,9 +38,12 @@ Hangman-game-app/
 ├── profile.png             # Profile page visual
 └── setting-icon.png        # Settings icon asset
 
+```
+---
+## 
+- Made with ❤️ by Fatima Firdouse
 ---
 
-## ✍️ Author
 
-**Fatima Firdouse**
+
 
